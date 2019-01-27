@@ -20,11 +20,11 @@ class Instructor extends Person{
         this.favLanguage = attrs.favLanguage;
         this.catchPhrase = attrs.catchPhrase;
     }
-    demo() {
-       return `Today we are learning ${this.specialty}`;
+    demo(subject) {
+       return `Today we are learning ${subject}`;
     }
-    grade() {
-        return `${student.name} receives a perfect score on ${this.specialty}`
+    grade(subject) {
+        return `${student.name} receives a perfect score on ${subject}`
     }
 }
 
@@ -33,7 +33,7 @@ class Student extends Person{
         super(attrs);
         this.previousBackground = attrs.previousBackground;
         this.className = attrs.className;
-        this.favSubjects = attrs.favSbjects;
+        this.favSubjects = attrs.favSubjects;
     }
     listsSubjects(){
         return `${this.favSubjects}`
@@ -52,7 +52,7 @@ class ProjectManagers extends Instructor{
         this.gradClassName = attrs.gradClassName;
         this.favInstructor = attrs.favInstructor;
     }
-    standup() {
+    standup(channel) {
         return `${name} announces to ${channel}, @channel standy times!`
     }
     debugsCode(subject) {
